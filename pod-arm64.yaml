@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello-arm64
+spec:
+  containers:
+  - name: hello
+    image: public.ecr.aws/eks-distro-build-tooling/eks-distro-minimal-base-nginx:latest
+  nodeSelector:
+    kubernetes.io/arch: arm64
